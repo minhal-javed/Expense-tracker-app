@@ -38,4 +38,4 @@ jobs:
       run: npm install --global surge
       
     - name: Deploy to Surge
-      run: surge ./build bc2020_Expense_Tracker.surge.sh --token ${{ secrets.EXPENSE_TRACKER }}
+      run: surge ./ bc2020_Expense_Tracker.surge.sh --token ${{ secrets.EXPENSE_TRACKER }}
