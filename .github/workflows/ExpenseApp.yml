@@ -31,11 +31,11 @@ jobs:
       with:
         cmd: install # will run `yarn install` command
    
-    - name: Build Expense Tracker App
-      run: npm build
+    - name: Build React App
+      run: yarm build
       
     - name: Install Surge
       run: npm install --global surge
       
     - name: Deploy to Surge
-      run: surge ./ bc2020_Expense_Tracker.surge.sh --token ${{ secrets.EXPENSE_TRACKER }}
+      run: surge ./build minhal_expense_tracker.surge.sh --token ${{ secrets.EXPENSE_TRACKER }}
